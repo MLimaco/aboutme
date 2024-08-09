@@ -1,0 +1,50 @@
+img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: gainsboro;
+    font-size: 36px;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+section {
+    font-size: 24px;
+    padding: 25px;
+}
+
+#presentacion {
+    font-size: 36px;
+    text-align: center;
+}
+
+#intereses {
+    font-size: 24px;
+    text-align: left;
+}
+
+li {
+    padding: 10px;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+/* Fuente w3 schools */ 
+footer {
+    background-color: gainsboro;
+    font-size: 36px;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
