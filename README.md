@@ -15,8 +15,12 @@ Esta app fue construida con el propósito de que sus usuarios puedan conocer má
 ### Puntuación de Accesibilidad de Lighthouse
 ![Puntuacion Lighthouse](./img/accesibilidad.png)
 * Propociona una captura de pantalla de tu puntuación después de ejecutar un informe de Accesibilidad de Lighthouse.
+En el update del laboratorio 03 la accesibilidad se mantiene en 100 ptos.
 
 ### Reflexiones y Comentarios
 
 * Considera incluir las respuestas a las preguntas a tu registro de aprendizaje y de tus envíos previos
 * Este también es un buen lugar para reflexionar sobre las herramientras y recursos que utilizaste y aprendiste
+* Se agregaron preguntas con respuestas random y una de múltiples. 
+* Se arregló el contador de puntos. 
+* Se agregó biografía al HTML. 
