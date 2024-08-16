@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: gainsboro;
+    background-color: rgb(208, 83, 83);
     font-size: 36px;
     padding: 20px;
     position: sticky;
@@ -23,11 +23,21 @@ section {
 }
 
 #presentacion {
+    background-color: rgb(25, 25, 25);
     font-size: 36px;
     text-align: center;
+    color: white;
+}
+
+#biografia {
+    background-color: rgb(25, 25, 25);
+    font-size: 24px;
+    text-align: justify;
+    color: white;
 }
 
 #intereses {
+    background-color: rgb(124, 144, 160);
     font-size: 24px;
     text-align: left;
 }
@@ -40,7 +50,7 @@ li {
 
 /* Fuente w3 schools */ 
 footer {
-    background-color: gainsboro;
+    background-color: rgb(208, 83, 83);
     font-size: 36px;
     padding: 20px;
     position: fixed;
