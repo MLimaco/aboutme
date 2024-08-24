@@ -1,8 +1,9 @@
 "use strict";
 
+let nombre;
 
 function bienvenida() {
-    let nombre = prompt("Bienvenido a mi página. ¿Cómo te llamas?");
+    nombre = prompt("Bienvenido a mi página. ¿Cómo te llamas?");
     alert("¡Bienvenido " + nombre + "! Por favor, responde las siguientes preguntas con si o no.");
 
 }
@@ -107,26 +108,26 @@ preguntasRespuestas();
 
 
 // // Fuente ejercicio tienda regalos code 102 y corregido con chatgpt
-// let mensajeHeader = document.createElement('p');
-// mensajeHeader.className = 'bienvenida';
-// mensajeHeader.innerText = "¡Bienvenido " + nombre + "!";
-// let headerBienvenida = document.querySelector('header');
-// if (headerBienvenida) {
-//     headerBienvenida.appendChild(mensajeHeader);
-// }
+let mensajeHeader = document.createElement('p');
+mensajeHeader.className = 'bienvenida';
+mensajeHeader.innerText = "¡Bienvenido " + nombre + "!";
+let headerBienvenida = document.querySelector('header');
+if (headerBienvenida) {
+    headerBienvenida.appendChild(mensajeHeader);
+}
 
 // // Fuente ejercicio tienda regalos code 102 y corregido con chatgpt
-// let mensajeFooter = document.createElement('p')
-// if (respuestasCorrectas >= 5) {
-//     mensajeFooter.innerText = "¡Parece que me conoces 😏!";
-// } else {
-//     mensajeFooter.innerText = "No me conoces nadita 🙄";
-// }
+let mensajeFooter = document.createElement('p')
+if (respuestasCorrectas >= 5) {
+    mensajeFooter.innerText = "¡Parece que me conoces 😏!";
+} else {
+    mensajeFooter.innerText = "No me conoces nadita 🙄";
+}
 
-// let footerPuntaje = document.querySelector('footer');
-// if (footerPuntaje) {
-//     footerPuntaje.appendChild(mensajeFooter);
-// }
+let footerPuntaje = document.querySelector('footer');
+if (footerPuntaje) {
+    footerPuntaje.appendChild(mensajeFooter);
+}
 
 console.log(
     "Hola",

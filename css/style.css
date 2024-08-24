@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: rgb(208, 83, 83);
+    background-color: rgb(144, 152, 165);
     font-size: 36px;
     padding: 20px;
     position: sticky;
@@ -22,22 +22,26 @@ section {
     padding: 25px;
 }
 
+#box {
+    background-color: rgb(white); 
+}
+
 #presentacion {
-    background-color: rgb(25, 25, 25);
+    background-color: rgb(3, 91, 241);
     font-size: 36px;
     text-align: center;
-    color: white;
+    color: white;   
 }
 
 #biografia {
-    background-color: rgb(25, 25, 25);
+    background-color: rgb(3, 91, 241);
     font-size: 24px;
-    text-align: justify;
+    text-align: left;
     color: white;
 }
 
 #intereses {
-    background-color: rgb(124, 144, 160);
+    background-color: rgb(white);
     font-size: 24px;
     text-align: left;
 }
@@ -48,9 +52,13 @@ li {
     list-style-position: inside;
 }
 
+li::marker {
+    color: rgb(255, 164, 0);
+  }
+
 /* Fuente w3 schools */ 
 footer {
-    background-color: rgb(208, 83, 83);
+    background-color: rgb(144, 152, 165);
     font-size: 36px;
     padding: 20px;
     position: fixed;
