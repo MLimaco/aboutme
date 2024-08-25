@@ -8,7 +8,6 @@ function bienvenida() {
     nombre = prompt("Bienvenido a mi página. ¿Cómo te llamas?");
     alert("¡Bienvenido " + nombre + "! Por favor, responde las siguientes preguntas con si o no.");
 
-    // // Fuente ejercicio tienda regalos code 102 y corregido con chatgpt
     let mensajeHeader = document.createElement('p');
     mensajeHeader.className = 'bienvenida';
     mensajeHeader.innerText = "¡Bienvenido " + nombre + "!";
