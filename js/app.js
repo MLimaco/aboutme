@@ -1,11 +1,21 @@
 "use strict";
 
 let nombre;
+let respuestasCorrectas = 0;
+let respuestasIncorrectas = 0;
 
 function bienvenida() {
     nombre = prompt("Bienvenido a mi página. ¿Cómo te llamas?");
     alert("¡Bienvenido " + nombre + "! Por favor, responde las siguientes preguntas con si o no.");
 
+    // // Fuente ejercicio tienda regalos code 102 y corregido con chatgpt
+    let mensajeHeader = document.createElement('p');
+    mensajeHeader.className = 'bienvenida';
+    mensajeHeader.innerText = "¡Bienvenido " + nombre + "!";
+    let headerBienvenida = document.querySelector('header');
+    if (headerBienvenida) {
+        headerBienvenida.appendChild(mensajeHeader);
+    }
 }
 
 function numeroAleatorio() {
@@ -40,47 +50,49 @@ function preguntasRespuestas() {
 
     console.log(respuestas)
 
-    let respuestasCorrectas = 0;
-    let respuestasIncorrectas = 0;
-    let intentos = 0;
-
     for (let i = 0; i < cuestionario.length; i++) {
-        const comparacionRespuestas = prompt(cuestionario[i]);
+        let comparacionRespuestas = prompt(cuestionario[i]);
+
         if (i === 5) {
+            let intentos = 0;
+            let acerto = false;
+
             for (let j = 0; j < 3; j++) {
                 const respuestaRandom = parseInt(comparacionRespuestas);
+                intentos++;
+
                 if (respuestaRandom === respuestas[5]) {
                     alert("¡Respuesta Correcta! Parece que si me conoces 😉");
                     respuestasCorrectas++;
-                    intentos++;
+                    acerto = true;
                     break;
                 } else if (respuestaRandom > respuestas[5]) {
                     alert('¡Jaaa Jaaa Te Equivocaste! El numero era menor');
-                    respuestasIncorrectas++;
-                    intentos++;
-                    prompt(cuestionario[5]);
                 } else if (respuestaRandom < respuestas[5]) {
                     alert('¡Jaaa Jaaa Te Equivocaste! El numero era mayor');
-                    respuestasIncorrectas++;
-                    intentos++;
-                    prompt(cuestionario[5]);
+                }
+                if (j < 2) {
+                    comparacionRespuestas = prompt("Intenta de nuevo: " + cuestionario[5]);
                 }
             }
-            console.log(intentos);
-            if (intentos == 3) {
-                alert("Te quedaste sin intentos, pense en el numero " + respuestaSeis);
+            if (!acerto) {
+                alert("Te quedaste sin intentos, pensé en el número " + respuestaSeis);
+                respuestasIncorrectas++;
             }
         } else if (i === 6) {
+            let acerto = false;
+
             for (let index = 0; index < respuestas[6].length; index++) {
-                if (respuestas[i][index].toLowerCase() === comparacionRespuestas.toLowerCase()) {
+                if (respuestas[6][index].toLowerCase() === comparacionRespuestas.toLowerCase()) {
                     alert("¡Respuesta Correcta! Parece que si me conoces 😉");
                     respuestasCorrectas++;
+                    acerto = true;
                     break;
-                } else {
-                    alert("¡Jaaa Jaaa Te Equivocaste!");
-                    respuestasIncorrectas++;
-                    prompt(cuestionario[6]);
                 }
+            }
+            if (!acerto) {
+                alert("¡Jaaa Jaaa Te Equivocaste!");
+                respuestasIncorrectas++;
             }
         } else {
             if (respuestas[i].toLowerCase() === comparacionRespuestas.toLowerCase()) {
@@ -92,42 +104,25 @@ function preguntasRespuestas() {
             }
         }
     }
+
+    let mensajeFooter = document.createElement('p')
+    if (respuestasCorrectas >= 5) {
+        mensajeFooter.innerText = "¡Parece que me conoces 😏! Si quieres no leas, ya para que jeje";
+    } else {
+        mensajeFooter.innerText = "No me conoces nadita, será mejor que leas sobre mi 🙄";
+    }
+
+    let footerPuntaje = document.querySelector('footer');
+    if (footerPuntaje) {
+        footerPuntaje.appendChild(mensajeFooter);
+    }
+
     alert("Gracias por participar, tu puntuación fue: " + respuestasCorrectas + " respuestas correctas de " + cuestionario.length + " preguntas");
 }
 
-// function mostrarPuntaje() {
-
-
-// }
 
 bienvenida();
-console.log(numeroAleatorio());
 preguntasRespuestas();
-
-
-
-
-// // Fuente ejercicio tienda regalos code 102 y corregido con chatgpt
-let mensajeHeader = document.createElement('p');
-mensajeHeader.className = 'bienvenida';
-mensajeHeader.innerText = "¡Bienvenido " + nombre + "!";
-let headerBienvenida = document.querySelector('header');
-if (headerBienvenida) {
-    headerBienvenida.appendChild(mensajeHeader);
-}
-
-// // Fuente ejercicio tienda regalos code 102 y corregido con chatgpt
-let mensajeFooter = document.createElement('p')
-if (respuestasCorrectas >= 5) {
-    mensajeFooter.innerText = "¡Parece que me conoces 😏!";
-} else {
-    mensajeFooter.innerText = "No me conoces nadita 🙄";
-}
-
-let footerPuntaje = document.querySelector('footer');
-if (footerPuntaje) {
-    footerPuntaje.appendChild(mensajeFooter);
-}
 
 console.log(
     "Hola",
